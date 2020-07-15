@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="css.movies.MovieStoreBaseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-07-15T12:42:27" hostname="tomas-ThinkPad-T430s" time="0.035">
+  <properties/>
+  <testcase name="findsMoviesWhenTitlesArePartiallyMatchedCaseInsensitive" classname="css.movies.MovieStoreBaseTest" time="0.014"/>
+  <testcase name="returnsNoResultsWhenNoTitlesPartiallyMatchSearch" classname="css.movies.MovieStoreBaseTest" time="0.001"/>
+  <testcase name="findsMoviesWhenReleaseYearIsBetweenTwoValues" classname="css.movies.MovieStoreBaseTest" time="0.002"/>
+  <testcase name="findsMoviesWhenDirectorExactlyMatches" classname="css.movies.MovieStoreBaseTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
