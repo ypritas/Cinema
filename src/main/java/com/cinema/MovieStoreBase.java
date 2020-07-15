@@ -10,18 +10,18 @@ public class MovieStoreBase {
         movies.add(movie);
     }
 
-    public List<Movie> filterMoviesBy(Predicate<Movie> fn) {
+    public <T> List<T> filterMoviesBy(Predicate<T> fn, List<T> movies) {
         return movies.stream().filter(fn).collect(Collectors.toList());
     }
 
     public List<Movie> findByPartialTitle(final String partialTitle) {
-       return filterMoviesBy(movie -> movie.title().toUpperCase().contains(partialTitle.toUpperCase()));
+       return filterMoviesBy(movie -> movie.title().toUpperCase().contains(partialTitle.toUpperCase()), movies);
     }
     public List<Movie> findByDirector(final String director) {
-        return filterMoviesBy(movie -> movie.director().equals(director));
+        return filterMoviesBy(movie -> movie.director().equals(director), movies);
     }
     public List<Movie> findByReleaseYear(final int from, final int to) {
-        return filterMoviesBy(movie -> movie.releaseYear() >= from && movie.releaseYear() <= to);
+        return filterMoviesBy(movie -> movie.releaseYear() >= from && movie.releaseYear() <= to, movies);
     }
     static class Movie {
         private final String title;
